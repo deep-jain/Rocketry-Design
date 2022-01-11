@@ -1,0 +1,4 @@
+Temperature(C)	Pressure(hPa)	Altitude(m)	Roll(deg)	Pitch(deg)	Heading(deg)
+25.10 C	1244.25 hPa	-1766.80 m	-2.70 degrees	1.45 degrees	29.36 degrees
+
+

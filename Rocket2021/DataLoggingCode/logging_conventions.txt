@@ -1,0 +1,34 @@
+# This is an example of what the logging printout format should be in the future.
+# To make analysis easier, we're gonna use the CSV (comma separated value) format,
+# because Excel plays nicely with it.
+
+# I've been thinking about how we should handle timestamps. An idea I had was to
+# record the Unix/Epoch time (milliseconds since January 1st, 1970) at the top of the file.
+# Then on every line, record the number of milliseconds since the file was created.
+# Additionally, every time the Arduino begins a new log, it should make a new .txt file
+# with the date and time as its filename.
+
+# Just as an example, data should include a heading and be formatted like this:
+
+#############################################
+
+// FEB_4_1431.txt
+
+1486235400
+
+Time(ms),	Temp(C),	Pressure(hPa),	Alt(m),		Roll(deg),	Pitch(deg),	Heading(deg)
+5,		10.10,		967.60,		387.20,		160.68,		51.20,		-100.72
+10,		10.00,		967.41,		388.84,		-152.26,	-11.75,		-20.03
+15,		9.70,		967.04,		392.04,		78.31,		77.85,		-110.64
+20,		9.70,		967.33,		389.53,		150.21,		40.95,		11.83
+25,		9.50,		967.43,		388.67,		-135.00,	21.42,		28.92
+30,		8.70,		966.92,		393.08,		86.10,		-66.62,		-33.87
+
+#############################################
+
+# We should also ditch recording temperature and pressure. From now on we're only really
+# concerned with altitude, acceleration, and orientation.
+
+# Also, let's stop with this silly business of overwriting past log files. We need that shit.
+
+# - Wade
