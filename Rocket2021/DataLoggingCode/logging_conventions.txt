@@ -26,9 +26,4 @@ Time(ms),	Temp(C),	Pressure(hPa),	Alt(m),		Roll(deg),	Pitch(deg),	Heading(deg)
 
 #############################################
 
-# We should also ditch recording temperature and pressure. From now on we're only really
-# concerned with altitude, acceleration, and orientation.
 
-# Also, let's stop with this silly business of overwriting past log files. We need that shit.
-
-# - Wade
